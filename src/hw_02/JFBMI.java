@@ -10,10 +10,19 @@ import javax.swing.JLayeredPane;
 import javax.swing.JEditorPane;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 public class JFBMI extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JTextField textAge;
+	private JTextField textHeight;
+	private JTextField textWeight;
+	private JTextField textBmi;
 
 	/**
 	 * Launch the application.
@@ -45,21 +54,6 @@ public class JFBMI extends JFrame {
 		JLayeredPane layeredPane = new JLayeredPane();
 		contentPane.add(layeredPane, BorderLayout.CENTER);
 		
-		JEditorPane dtrpnAge = new JEditorPane();
-		dtrpnAge.setText("Age");
-		dtrpnAge.setBounds(24, 62, 106, 21);
-		layeredPane.add(dtrpnAge);
-		
-		JEditorPane dtrpnHeight = new JEditorPane();
-		dtrpnHeight.setText("Height");
-		dtrpnHeight.setBounds(24, 111, 106, 21);
-		layeredPane.add(dtrpnHeight);
-		
-		JEditorPane dtrpnSc = new JEditorPane();
-		dtrpnSc.setText("Weight");
-		dtrpnSc.setBounds(24, 166, 106, 21);
-		layeredPane.add(dtrpnSc);
-		
 		JLabel lblHeight = new JLabel("Height");
 		lblHeight.setBounds(140, 117, 46, 15);
 		layeredPane.add(lblHeight);
@@ -72,9 +66,34 @@ public class JFBMI extends JFrame {
 		lblWeight.setBounds(140, 172, 46, 15);
 		layeredPane.add(lblWeight);
 		
-		JEditorPane dtrpnBmi = new JEditorPane();
-		dtrpnBmi.setText("BMI");
-		dtrpnBmi.setBounds(243, 111, 106, 21);
-		layeredPane.add(dtrpnBmi);
+		textAge = new JTextField();
+		textAge.setHorizontalAlignment(SwingConstants.RIGHT);
+		textAge.setBounds(34, 65, 96, 21);
+		layeredPane.add(textAge);
+		textAge.setColumns(10);
+		int age = Integer.parseInt(textAge.getText());
+		
+		textHeight = new JTextField();
+		textHeight.setHorizontalAlignment(SwingConstants.RIGHT);
+		textHeight.setBounds(34, 114, 96, 21);
+		layeredPane.add(textHeight);
+		textHeight.setColumns(10);
+		double height = Double.parseDouble(textHeight.getText());
+		
+		textWeight = new JTextField();
+		textWeight.setHorizontalAlignment(SwingConstants.RIGHT);
+		textWeight.setBounds(34, 169, 96, 21);
+		layeredPane.add(textWeight);
+		textWeight.setColumns(10);
+		double weight = Double.parseDouble(textWeight.getText());
+		
+		BMI myBMI = new BMI("name", age, weight, height);
+		textBmi = new JTextField();
+		textBmi.setHorizontalAlignment(SwingConstants.CENTER);
+		textBmi.setBounds(260, 140, 96, 21);
+		layeredPane.add(textBmi);
+		textBmi.setColumns(10);
+		
+		textBmi.setText(String.format("%.2f", myBMI.getBMI()));
 	}
 }
