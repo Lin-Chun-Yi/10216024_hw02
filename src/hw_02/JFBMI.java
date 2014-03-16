@@ -62,16 +62,16 @@ public class JFBMI extends JFrame {
 		JLayeredPane layeredPane = new JLayeredPane();
 		contentPane.add(layeredPane, BorderLayout.CENTER);
 		
-		JLabel lblHeight = new JLabel("Height");
-		lblHeight.setBounds(140, 85, 46, 15);
+		JLabel lblHeight = new JLabel("Height(inchs)");
+		lblHeight.setBounds(140, 85, 78, 15);
 		layeredPane.add(lblHeight);
 		
 		JLabel lblAge = new JLabel("Age");
 		lblAge.setBounds(140, 37, 46, 15);
 		layeredPane.add(lblAge);
 		
-		JLabel lblWeight = new JLabel("Weight");
-		lblWeight.setBounds(140, 129, 46, 15);
+		JLabel lblWeight = new JLabel("Weight(pounds)");
+		lblWeight.setBounds(140, 129, 96, 15);
 		layeredPane.add(lblWeight);
 		
 		textAge = new JTextField();
