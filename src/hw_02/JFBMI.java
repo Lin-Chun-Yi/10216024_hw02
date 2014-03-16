@@ -39,6 +39,7 @@ public class JFBMI extends JFrame {
 					frame.setTitle("BMI");
 				    frame.setLocationRelativeTo(null); // Center the frame
 				    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				    frame.setBounds(100, 100, 450, 300);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -94,15 +95,19 @@ public class JFBMI extends JFrame {
 		
 		textBmi = new JTextField();
 		textBmi.setHorizontalAlignment(SwingConstants.CENTER);
-		textBmi.setBounds(260, 140, 96, 21);
+		textBmi.setBounds(260, 126, 96, 21);
 		layeredPane.add(textBmi);
 		textBmi.setColumns(10);
 		
 		bt.setBounds(43, 169, 87, 23);
 		layeredPane.add(bt);
 		
+		JLabel lblNewLabel = new JLabel("B  M  I");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(260, 70, 87, 45);
+		layeredPane.add(lblNewLabel);
 		
-		
+		//
 		bt.addActionListener(new ButtonListener());
 	}
 	
@@ -110,14 +115,14 @@ public class JFBMI extends JFrame {
 	    @Override 
 	    public void actionPerformed(ActionEvent e) {
 	    	// Get values from text fields
-
 	    	int age = Integer.parseInt(textAge.getText());
 	    	double weight = Double.parseDouble(textWeight.getText());
 	    	double height = Double.parseDouble(textHeight.getText());
 
 	    	// Create a  object
 	    	BMI myBMI = new BMI("name", age, weight, height);
-
+	    	
+	    	//display the result
 	    	textBmi.setText(String.format("%.2f", myBMI.getBMI()));
 	    }
 	}
