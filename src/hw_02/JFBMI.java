@@ -1,4 +1,4 @@
-package hw_02;
+/**package hw_02;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -19,7 +19,7 @@ public class JFBMI extends JFrame {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+/**	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField textAge;
 	private JTextField textHeight;
@@ -30,7 +30,7 @@ public class JFBMI extends JFrame {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+/**	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -51,7 +51,7 @@ public class JFBMI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public JFBMI() {
+/**	public JFBMI() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -127,3 +127,4 @@ public class JFBMI extends JFrame {
 	    }
 	}
 }
+*/
