@@ -10,16 +10,13 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.JLabel;
 import java.awt.FlowLayout;
-import java.awt.GridLayout;
 
 public class MyBMI extends JFrame {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
-	private static final ActionListener ButtonListener = null;
+
 	private JTextField jtfAge = new JTextField();
 	private JTextField jtfHeight = new JTextField();
 	private JTextField jtfWeight = new JTextField();
@@ -28,7 +25,7 @@ public class MyBMI extends JFrame {
 	private JButton jbtCalculate = new JButton("Calculate BMI");
 	
 	public MyBMI(){
-		JPanel p1 = new JPanel(new GridLayout(3, 2));
+		JPanel p1 = new JPanel(new GridLayout(4, 2));
 		p1.add(new JLabel("Age"));
 		p1.add(jtfAge);
 		p1.add(new JLabel("Height(inchs)"));
