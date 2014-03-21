@@ -39,7 +39,7 @@ public class MyBMI extends JFrame {
 		p2.add(jbtCalculate);
 		
 		add(p1, BorderLayout.CENTER);
-		add(p1, BorderLayout.SOUTH);
+		add(p2, BorderLayout.SOUTH);
 		
 		jbtCalculate.addActionListener(new ButtonListener());
 	}
@@ -65,7 +65,7 @@ public class MyBMI extends JFrame {
 		MyBMI frame = new MyBMI();
 		
 		frame.setTitle("BMI");
-		frame.setSize(400, 300);
+		frame.setSize(300, 200);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
