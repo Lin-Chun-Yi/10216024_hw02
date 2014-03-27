@@ -20,9 +20,8 @@ public class BMI {
 	  }
 	  
 	  public double getBMI() {
-	    double bmi = weight * KILOGRAMS_PER_POUND / 
-	      ((height * METERS_PER_INCH) * (height * METERS_PER_INCH));
-	    return Math.round(bmi * 100) / 100.0;
+	    double bmi = weight / (height * height);
+	    return bmi;
 	  }
 	  
 	  public String getStatus() {
